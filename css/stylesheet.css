@@ -81,6 +81,8 @@ p {
 
 .logo h1 {
 	color: #fff;
+	font-weight: 400;
+	font-size: 80px;
 }
 
 .items {
@@ -93,6 +95,7 @@ p {
 	    flex-basis: 100px;
 	padding: 18px 0 10px 0;
 	margin-top: 50px;
+	flex-wrap: wrap;
 
 }
 
@@ -105,6 +108,7 @@ p {
 	-webkit-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+	margin-bottom: 50px;
 }
 
 .item:hover {
@@ -119,7 +123,7 @@ p {
 
 .title {
 	font-weight: 500;
-	font-size: 17px;
+	font-size: 20px;
 	color: white;
 }
 
@@ -131,41 +135,14 @@ p {
 
 .subtitle {
 	color: #d5d5d5;
-	font-size: 12px;
-	padding: 0px 15px 10px 15px;;
+	font-size: 16px;
+	padding: 0px 20px 10px 20px;;
 }
 
-
-@media(min-width: 400px) {
-	.logo img {
-		width: 280px; /* Change image size for mid sized devices */
-	}
-}
 
 @media(min-width: 1250px) {
-	.title {
-		font-size: 24px;
-	}
-
-	.subtitle {
-		font-size: 15px;
-	}
-
-	.logo img {
-		width: 470px; /* Change image size for desktop */
-	}
-
-	.logo {
-		margin-bottom: 28px;
-	}
-	.img {
-		width: 100%;
-	}
 	.items {
 		padding: 30px 0 20px 0;
-	}
-	.extrapad {
-		padding: 0 42.5px;
 	}
 }
 
@@ -175,7 +152,6 @@ p {
 		    -ms-flex-pack: center;
 		        justify-content: center;
 	}
-
 	.item:not(:first-child) {
 		margin-left: 90px;
 	}
