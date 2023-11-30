@@ -1,3 +1,39 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Light.woff2);
+    /*src: url(fonts/Quicksand-Light.ttf);*/
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Regular.woff2);
+    /*src: url(fonts/Quicksand-Regular.ttf);*/
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Medium.woff2);
+    /*src: url(fonts/Quicksand-Medium.ttf);*/
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-SemiBold.woff2);
+    /*src: url(fonts/Quicksand-SemiBold.ttf);*/
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Bold.woff2);
+    /*src: url(fonts/Quicksand-Bold.ttf);*/
+    font-weight: 700;
+    font-display: swap;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -6,7 +42,7 @@ body {
 	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(0, 0, 0, 0.4)),
 				url("../img/interstellar.webp") no-repeat center center fixed;
 	background-size: cover;
-	font-family: "Open Sans", Helvetica;
+	font-family: Quicksand, sans-serif;
 	margin: 0;
 	position: relative;
 }
