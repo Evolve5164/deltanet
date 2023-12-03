@@ -97,7 +97,6 @@ p {
 	padding: 18px 0 10px 0;
 	margin-top: 50px;
 	flex-wrap: wrap;
-
 }
 
 .item img {
@@ -152,6 +151,18 @@ p {
 	padding: 0px 20px 10px 20px;;
 }
 
+@media(min-width: 1250px) {
+	.item {
+		margin: 50px 50px 0px 50px;
+		width: 450px;
+	}
+}
+
+@media(min-width: 1250px) {
+	.logo {
+		margin-top: 20vh;
+	}
+}
 
 @media(max-width: 1250px) {
 	.item {
