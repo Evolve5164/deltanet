@@ -73,6 +73,7 @@ p {
 
 .container {
 	text-align: center;
+	height: 100vh;
 }
 
 .logo img {
