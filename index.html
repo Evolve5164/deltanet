@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -12,28 +15,47 @@
 			<h1>Jellyfin</h1>
 		</div>
 		<div class="items">
-			<a href="https://deltastream.duckdns.org:55251" class="item">
-			<div class="item-container">
-				<img src="img/jellyfin_icon.svg" alt="jellyfin logo" class="img">
-				<p class="subtitle">deltastream.duckdns.org:55251</p>
-				<p class="title">Jellyfin</p>
+			<div class="item">
+				<div class="row1">
+					<img src="img/jellyfin_icon.png" alt="jellyfin logo" class="img">
+					<div class="col1">
+						<p class="title">Stream</p>
+						<p class="subtitle" id="copy1">deltastream.duckdns.org:55251</p>
+					</div>
+				</div>
+				<div class="row2">
+					<a href="https://deltastream.duckdns.org:55251" class="button"><i class="fas fa-external-link-alt"></i></a>
+					<a onclick="copyToClipboard('#copy1')" class="button"><i class="fa-solid fa-copy"></i></a>
+				</div>
 			</div>
-			</a>
-			<a href="https://deltarequest.duckdns.org:55251" class="item">
-			<div class="item-container">
-				<img src="img/jellyseerr_logo.png" alt="jellyseer logo" class="img">
-				<p class="subtitle">deltarequest.duckdns.org:55251</p>
-				<p class="title">Jellyseerr</p>
+			<div class="item">
+				<div class="row1">
+					<img src="img/jellyseerr_logo.png" alt="jellyseer logo" class="img">
+					<div class="col1">
+						<p class="title">Request</p>
+						<p class="subtitle" id="copy2">deltarequest.duckdns.org:55251</p>
+					</div>
+				</div>
+				<div class="row2">
+					<a href="https://deltarequest.duckdns.org:55251" class="button"><i class="fas fa-external-link-alt"></i></a>
+					<a id="copy" onclick="copyToClipboard('#copy2')" class="button"><i class="fa-solid fa-copy"></i></a>
+				</div>
 			</div>
-			</a>
-			<a href="https://jellyfin.org/downloads" class="item">
-			<div class="item-container">
-				<img src="img/jellyfin_icon.svg" alt="jellyfin logo" class="img">
-				<p class="subtitle">jellyfin.org/downloads</p>
-				<p class="title">Clients</p>
+			<div href="https://jellyfin.org/downloads" class="item">
+				<div class="row1">
+					<img src="img/jellyfin_icon.png" alt="jellyfin logo" class="img">
+					<div class="col1">
+						<p class="title">Download</p>
+						<p class="subtitle" id="copy3">jellyfin.org/downloads</p>
+					</div>
+				</div>
+				<div class="row2">
+					<a href="https://jellyfin.org/downloads" class="button"><i class="fas fa-external-link-alt"></i></a>
+					<a id="copy" onclick="copyToClipboard('#copy3')" class="button"><i class="fa-solid fa-copy"></i></a>
+				</div>
 			</div>
-			</a>
 		</div>
 	</div>
+	<div id="notification"><p>Link copied to clipboard</p></div>
 </body>
 </html>

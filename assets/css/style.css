@@ -1,0 +1,33 @@
+#loginPage .btnForgotPassword, #loginPage h1 {
+    display: none
+}
+
+.manualLoginForm {
+	margin-top: 20vh;
+	margin-bottom: 0px;
+}
+
+.manualLoginForm, #loginPage .readOnlyContent {
+	max-width: 450px;
+	font-weight: 500;
+}
+
+#loginPage button {
+    border-radius: 8px !important;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+#loginPage button:hover {
+    box-shadow: inset 1000px 1000px 1000px 0 rgba(0, 0, 0, 0.1);
+}
+
+.manualLoginForm input {
+    border-radius: 8px !important;
+    border: 2px solid rgba(0, 0, 0, 0.0);
+	padding: 4px;
+}
+
+.manualLoginForm input:focus {
+	border: 2px solid #00a4dc!important;
+}

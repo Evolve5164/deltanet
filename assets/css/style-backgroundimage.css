@@ -1,0 +1,64 @@
+#loginPage {
+    background-image: url('../img/the_creator.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+#loginPage::before {
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#loginPage .btnForgotPassword,
+#loginPage h1 {
+    display: none
+}
+
+.manualLoginForm {
+	margin-top: 20vh;
+	padding: 40px 40px 100px 40px;
+	border-radius: 16px;
+	margin-bottom: 0px;
+	background: rgba(80, 80, 80, 0.3);
+    border-radius: 8px !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#loginPage .readOnlyContent {
+	border-radius: 4px;
+	margin-top: -100px!important;
+	padding: 10px 40px 0px 40px;
+}
+
+.manualLoginForm, #loginPage .readOnlyContent {
+	max-width: 400px;
+	font-weight: 500;
+}
+
+#loginPage button {
+    border-radius: 8px !important;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+#loginPage button:hover {
+    box-shadow: inset 1000px 1000px 1000px 0 rgba(0, 0, 0, 0.1);
+}
+
+.manualLoginForm input {
+    background: rgba(35, 35, 35, 0.5) !important;
+    border-radius: 8px !important;
+    border: 2px solid rgba(0, 0, 0, 0.0);
+	padding: 4px;
+}
+
+.manualLoginForm input:focus {
+	border: 2px solid #00a4dc!important;
+}
