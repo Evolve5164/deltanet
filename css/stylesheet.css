@@ -208,3 +208,12 @@ p {
 #notification p {
 	margin-top: 12px;
 }
+
+@media only screen and (min-width: 1200px) {
+	.items {
+		justify-content: space-evenly;
+	}
+	.container {
+		max-width: 1900px;
+	}
+  }
