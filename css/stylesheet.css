@@ -88,7 +88,7 @@ p {
 .logo h1 {
 	color: #fff;
 	font-weight: 400;
-	font-size: 85px;
+	font-size: 95px;
 }
 
 .items {
@@ -217,9 +217,6 @@ p {
 	}
 	.container {
 		max-width: 1900px;
-	}
-	.logo h1 {
-		font-size: 95px;
 	}
   }
 
