@@ -39,7 +39,7 @@
 }
 
 body {
-	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(0, 0, 0, 0.4)),
+	background: linear-gradient(rgba(20, 26, 35,0.4),rgba(0, 0, 0, 0.6)),
 				url("../img/interstellar.webp") no-repeat center center;
 	background-size: cover;
 	font-family: Quicksand, sans-serif;
@@ -88,7 +88,7 @@ p {
 .logo h1 {
 	color: #fff;
 	font-weight: 400;
-	font-size: 80px;
+	font-size: 85px;
 }
 
 .items {
@@ -99,6 +99,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	padding-bottom: 250px;
 }
 
 .item img {
@@ -113,11 +114,11 @@ p {
 	margin-bottom: 50px;
 	width: 100%;
 	max-width: 300px;
-	background: rgba(255, 255, 255, 0.02);
+	background: rgba(255, 255, 255, 0.04);
 	border-radius: 8px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	margin: 25px;
 	padding: 20px;
 	border-radius: 16px;
@@ -216,6 +217,9 @@ p {
 	}
 	.container {
 		max-width: 1900px;
+	}
+	.logo h1 {
+		font-size: 95px;
 	}
   }
 
