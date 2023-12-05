@@ -166,7 +166,7 @@ p {
 .subtitle {
 	color: #d5d5d5;
 	font-size: 16px;
-	padding: 10px 0px 0px 0px;;
+	margin-top: 20px;
 }
 
 .button {
@@ -217,3 +217,25 @@ p {
 		max-width: 1900px;
 	}
   }
+
+
+.dot {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.35);
+	align-self: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	transition: background-color 500ms ease, box-shadow 500ms ease;
+}
+
+.up {
+	background-color: #00ff00;
+	box-shadow: 0 0 35px 5px #00ff00;
+}
+
+.down {
+	background-color: #ff0000;
+	box-shadow: 0 0 35px 5px #ff0000;
+}
