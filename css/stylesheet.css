@@ -53,7 +53,7 @@
 
 body {
 	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(0, 0, 0, 0.8)),
-				url("../img/backgrounds/thelastofus.jpg") no-repeat center center;
+				url("../img/backgrounds/thelastofus.webp") no-repeat center center;
 	background-size: cover;
 	font-family: Quicksand, sans-serif;
 	margin: 0;
