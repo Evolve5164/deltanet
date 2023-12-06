@@ -32,18 +32,34 @@ function setButtonLinks() {
 
 function pingUrl(Url, statusElementId) {
     fetch(Url)
-    .then(response => {
-        if (response.ok) {
-            document.getElementById(statusElementId).classList.remove("down");
-            document.getElementById(statusElementId).classList.add("up");
-        }
-    })
-    .catch(error => {
-        document.getElementById(statusElementId).classList.remove("up");
-        document.getElementById(statusElementId).classList.add("down");
-        console.error(error);
-    });
+        .then(response => {
+            if (response.ok) {
+                document.getElementById(statusElementId).classList.remove("down");
+                document.getElementById(statusElementId).classList.add("up");
+            }
+        })
+        .catch(error => {
+            document.getElementById(statusElementId).classList.remove("up");
+            document.getElementById(statusElementId).classList.add("down");
+            console.error(error);
+        });
 }
+
+/* Get user IP and location */
+fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+        const ip = data.ip;
+        fetch(`https://ipapi.co/${ip}/json/`)
+            .then(response => response.json())
+            .then(data => {
+                const city = data.city;
+                const region = data.region;
+                const country = data.country_name;
+                document.getElementById("ipAddress").textContent = ip;
+                document.getElementById("location").textContent = `${city}`
+            });
+    });
 
 function copyToClipboard(element) {
     let $temp = $("<input>");
@@ -53,15 +69,15 @@ function copyToClipboard(element) {
     $temp.remove();
     // Display a sliding notification that the text has been copied
     $("#notification").css("height", "50px");
-    setTimeout(function() {
+    setTimeout(function () {
         $("#notification").css("height", "0");
     }, 3000);
 }
 
-window.onload = pingUrl(stream1Ping, "stream1Status");
-window.onload = pingUrl(stream2Ping, "stream2Status");
-window.onload = pingUrl(request1Ping, "request1Status");
-window.onload = pingUrl(request2Ping, "request2Status");
-window.onload = pingUrl(downloadsPing, "downloadsStatus");
-window.onload = setLinks()
-window.onload = setButtonLinks()
+pingUrl(stream1Ping, "stream1Status");
+pingUrl(stream2Ping, "stream2Status");
+pingUrl(request1Ping, "request1Status");
+pingUrl(request2Ping, "request2Status");
+pingUrl(downloadsPing, "downloadsStatus");
+setLinks()
+setButtonLinks()

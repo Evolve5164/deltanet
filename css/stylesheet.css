@@ -50,16 +50,6 @@ body {
 html, body {
 	width: 100%;
 	min-height: 100vh;
-	overflow-x: hidden;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
 }
 
 a {
@@ -73,23 +63,31 @@ p {
 
 .container {
 	text-align: center;
-	min-height: 100vh;
 	width: 95%;
+	min-height: calc(100vh - 50px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	max-width: 1600px;
+	max-width: 2000px;
 	padding-top: 50px;
 	padding-bottom: 50px;
+	margin: 0 auto;
+}
+
+.footer {
+	color: #8f8f8f;
+	display: block;
+	height: 50px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .logo {
 	display: none;
-}
-
-.logo img {
-	width: 200px; /* Change image size for mobile */
 }
 
 .logo h1 {
@@ -121,6 +119,7 @@ p {
 	transition: all 0.2s ease;
 	width: 100%;
 	max-width: 300px;
+	min-height: 300px;
 	background: rgba(255, 255, 255, 0.04);
 	border-radius: 8px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -200,10 +199,6 @@ p {
 	background: rgba(255, 255, 255, 0.1);
 }
 
-.button i {
-	margin-left: 5px;
-}
-
 #notification {
 	position: fixed;
 	bottom: 0;
@@ -221,7 +216,7 @@ p {
 }
 
 @media only screen and (max-width: 670px) {
-	.item {
+	.item, .ip {
 		min-width: 80%;
 	}
 }
