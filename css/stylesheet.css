@@ -34,6 +34,19 @@
     font-display: swap;
 }
 
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fadeInOut {
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+}
+
+.fade-in { animation: fadeIn 0.5s; }
+.fade-in-out { animation: fadeInOut 1s infinite; }
+
 * {
 	box-sizing: border-box;
 }
@@ -232,7 +245,9 @@ p {
 	height: 10px;
 	width: 10px;
 	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 0.35);
+	/*background-color: rgba(255, 255, 255, 0.35);*/
+	background-color: #FFA500;
+	box-shadow: 0 0 35px 5px #FFA500;
 	align-self: center;
 	margin-top: 20px;
 	margin-bottom: 20px;

@@ -31,14 +31,17 @@ function setButtonLinks() {
 }
 
 function pingUrl(Url, statusElementId) {
+    document.getElementById(statusElementId).classList.add("fade-in-out");
     fetch(Url)
         .then(response => {
             if (response.ok) {
+                document.getElementById(statusElementId).classList.remove("fade-in-out");
                 document.getElementById(statusElementId).classList.remove("down");
                 document.getElementById(statusElementId).classList.add("up");
             }
         })
         .catch(error => {
+            document.getElementById(statusElementId).classList.remove("fade-in-out");
             document.getElementById(statusElementId).classList.remove("up");
             document.getElementById(statusElementId).classList.add("down");
             console.error(error);
@@ -57,8 +60,9 @@ fetch('https://api.ipify.org?format=json')
                 const region = data.region;
                 const country = data.country_name;
                 document.getElementById("ipAddress").textContent = ip;
-                document.getElementById("location").textContent = `${city}`
-                document.getElementById("divider").textContent = "|"
+                document.getElementById("location").textContent = `${city}`;
+                document.getElementById("divider").textContent = "|";
+                document.getElementById("footerContent").classList.add("fade-in");
             });
     });
 
