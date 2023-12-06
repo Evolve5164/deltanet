@@ -199,6 +199,12 @@ p {
 	background: rgba(255, 255, 255, 0.1);
 }
 
+.button img {
+	max-width: 17px;
+	border-radius: 0px;
+	margin: 0px;
+}
+
 #notification {
 	position: fixed;
 	bottom: 0;
