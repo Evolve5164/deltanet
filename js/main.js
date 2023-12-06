@@ -58,6 +58,7 @@ fetch('https://api.ipify.org?format=json')
                 const country = data.country_name;
                 document.getElementById("ipAddress").textContent = ip;
                 document.getElementById("location").textContent = `${city}`
+                document.getElementById("divider").textContent = "|"
             });
     });
 
