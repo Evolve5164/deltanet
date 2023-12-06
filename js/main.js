@@ -79,10 +79,10 @@ function copyToClipboard(element) {
     }, 3000);
 }
 
+setLinks()
+setButtonLinks()
 pingUrl(stream1Ping, "stream1Status");
 pingUrl(stream2Ping, "stream2Status");
 pingUrl(request1Ping, "request1Status");
 pingUrl(request2Ping, "request2Status");
 pingUrl(downloadsPing, "downloadsStatus");
-setLinks()
-setButtonLinks()

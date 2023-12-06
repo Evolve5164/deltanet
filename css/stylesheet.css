@@ -52,8 +52,8 @@
 }
 
 body {
-	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(0, 0, 0, 0.6)),
-				url("../img/interstellar.webp") no-repeat center center;
+	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(0, 0, 0, 0.8)),
+				url("../img/backgrounds/thelastofus.jpg") no-repeat center center;
 	background-size: cover;
 	font-family: Quicksand, sans-serif;
 	margin: 0;
@@ -120,57 +120,60 @@ p {
 	gap: 25px;
 }
 
-.item img {
-	margin-bottom: 10px;
-	width: 75px;
-	transition: all 200ms;
-}
-
 .item {
 	-webkit-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 	width: 100%;
 	max-width: 300px;
-	min-height: 300px;
+	height: 275px;
+	border-radius: 16px;
 	background: rgba(255, 255, 255, 0.04);
-	border-radius: 8px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	padding: 20px;
-	border-radius: 16px;
 }
 
-.row1 {
-	padding: 10px;
-	border-radius: 16px;
-	display: flex;
-	justify-content: flex-start;
-	text-align: start;
-	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center
-}
-
-.row1 img {
-	width: 80px;
-}
-.row2 {
+.item-inner {
 	width: 100%;
-}
-.row3 {
-	padding: 30px 10px 10px 10px;
-	border-radius: 16px;
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 30px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 }
 
-.col1 {
+.row1 {
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	margin-top: 10px;
+	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.row1 img {
+	max-width: 60px;
+	max-height: 60px;
+}
+.row2 {
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.row3 {
+	display: flex;
+	justify-content: space-evenly;
+	background: rgba(0, 0, 0, 0.1);
+	margin: 0px -30px -30px -30px;
+	border-radius: 0px 0px 16px 16px;
+}
+
+.buttons {
+	width: 100%;
+	padding: 10px 0px 10px 0px;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .title {
@@ -187,7 +190,7 @@ p {
 
 .subtitle {
 	color: #d5d5d5;
-	font-size: 16px;
+	font-size: 15px;
 	margin-top: 5px;
 }
 
@@ -195,8 +198,8 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background: rgba(255, 255, 255, 0.04);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 	backdrop-filter: blur(5px);
@@ -213,7 +216,7 @@ p {
 }
 
 .button img {
-	max-width: 17px;
+	max-width: 14px;
 	border-radius: 0px;
 	margin: 0px;
 }
@@ -234,9 +237,12 @@ p {
 	margin-top: 12px;
 }
 
-@media only screen and (max-width: 670px) {
-	.item, .ip {
-		min-width: 80%;
+@media only screen and (min-width: 380px) and (max-width: 675px) {
+	.item{
+		min-width: 70%;
+	}
+	.items {
+		gap: 50px;
 	}
 }
 
