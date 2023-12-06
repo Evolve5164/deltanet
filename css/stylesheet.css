@@ -52,8 +52,12 @@
 }
 
 body {
-	background: linear-gradient(rgba(20, 26, 35,0.55),rgba(0, 0, 0, 0.8)),
-				url("../img/backgrounds/thelastofus.webp") no-repeat center center;
+	background-color:rgba(33, 33, 33);
+	background: url("../img/backgrounds/thelastofus.webp") no-repeat center center;
+	box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.6),
+	inset 0 0 100px 100px rgba(0, 0, 0, 0.4),
+	inset 0 0 200px 200px rgba(0, 0, 0, 0.2),
+	inset 0 0 300px 300px rgba(0, 0, 0, 0.1);
 	background-size: cover;
 	font-family: Quicksand, sans-serif;
 	margin: 0;
