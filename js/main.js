@@ -38,13 +38,11 @@ function pingUrl(Url, statusElementId) {
             document.getElementById(statusElementId).classList.add("up");
         }
     })
-    /*
     .catch(error => {
         document.getElementById(statusElementId).classList.remove("up");
         document.getElementById(statusElementId).classList.add("down");
         console.error(error);
     });
-    */
 }
 
 function copyToClipboard(element) {
