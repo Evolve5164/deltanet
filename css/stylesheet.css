@@ -119,7 +119,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 25px;
+	gap: 50px;
 }
 
 .item {
