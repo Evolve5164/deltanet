@@ -1,32 +1,24 @@
 // Set Urls
-const stream1 = "stream.deltanet.tk:55251"
-const stream2 = "deltastream.duckdns.org:55251"
-const request1 = "request.deltanet.tk:55251"
-const request2 = "deltarequest.duckdns.org:55251"
+const stream = "deltastream.duckdns.org:55251"
+const request = "deltarequest.duckdns.org:55251"
 const downloads = "jellyfin.org/downloads"
 
 // Set Urls to ping
-const stream1Ping = "https://" + stream1 + "/system/info/public";
-const stream2Ping = "https://" + stream2 + "/system/info/public";
-const request1Ping = "https://" + request1 + "/api/v1/status";
-const request2Ping = "https://" + request2 + "/api/v1/status";
+const streamPing = "https://" + stream + "/system/info/public";
+const requestPing = "https://" + request + "/api/v1/status";
 const downloadsPing = "https://" + downloads;
 
 // Set <a> href to given urls
 function setLinks() {
-    document.getElementById("stream1").textContent = stream1
-    document.getElementById("stream2").textContent = stream2
-    document.getElementById("request1").textContent = request1
-    document.getElementById("request2").textContent = request2
+    document.getElementById("stream").textContent = stream
+    document.getElementById("request").textContent = request
     document.getElementById("downloads").textContent = downloads
 }
 
 // Set <a> href to given urls
 function setButtonLinks() {
-    document.getElementById("stream1Button").href = "https://" + stream1
-    document.getElementById("stream2Button").href = "https://" + stream2
-    document.getElementById("request1Button").href = "https://" + request1
-    document.getElementById("request2Button").href = "https://" + request2
+    document.getElementById("streamButton").href = "https://" + stream
+    document.getElementById("requestButton").href = "https://" + request
     document.getElementById("downloads").href = "https://" + downloads
 }
 
@@ -81,8 +73,6 @@ function copyToClipboard(element) {
 
 setLinks()
 setButtonLinks()
-pingUrl(stream1Ping, "stream1Status");
-pingUrl(stream2Ping, "stream2Status");
-pingUrl(request1Ping, "request1Status");
-pingUrl(request2Ping, "request2Status");
+pingUrl(streamPing, "streamStatus");
+pingUrl(requestPing, "requestStatus");
 pingUrl(downloadsPing, "downloadsStatus");

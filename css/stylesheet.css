@@ -52,11 +52,9 @@
 }
 
 body {
-	background: url("../img/backgrounds/thelastofus.webp") no-repeat center center;
-	box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.6),
-              inset 0 0 100px 100px rgba(0, 0, 0, 0.4),
-              inset 0 0 200px 200px rgba(0, 0, 0, 0.2),
-              inset 0 0 300px 300px rgba(0, 0, 0, 0.1);
+	background: url("../img/backgrounds/thecreator.webp") no-repeat center center;
+	box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.4),
+              inset 0 0 300px 0px rgba(0, 0, 0, 0.2);
 	background-size: cover;
 	font-family: Quicksand, sans-serif;
 	margin: 0;
@@ -133,7 +131,7 @@ p {
 	height: 275px;
 	border-radius: 16px;
 	background: rgba(255, 255, 255, 0.04);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 }
@@ -243,10 +241,7 @@ p {
 
 @media only screen and (min-width: 380px) and (max-width: 675px) {
 	.item{
-		min-width: 70%;
-	}
-	.items {
-		gap: 50px;
+		min-width: 65%;
 	}
 }
 
