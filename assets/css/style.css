@@ -31,3 +31,11 @@
 .manualLoginForm input:focus {
 	border: 2px solid #00a4dc!important;
 }
+
+/* Horizontal scroll fix nav menu scifi theme */
+.emby-tabs {
+	max-width: 100vw;
+	overflow-y: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+  }
