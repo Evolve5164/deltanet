@@ -240,8 +240,13 @@ p {
 }
 
 @media only screen and (min-width: 380px) and (max-width: 675px) {
-	.item{
+	.item {
 		min-width: 65%;
+	}
+}
+@media only screen and (min-width: 1400px) {
+	.items {
+		gap: 8vw;
 	}
 }
 
