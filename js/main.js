@@ -1,4 +1,4 @@
-// Set Urls
+// Set Urls and ports
 const stream = "stream.deltanet.tk:58904"
 const request = "request.deltanet.tk:58904"
 const downloads = "jellyfin.org/downloads"
