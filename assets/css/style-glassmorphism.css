@@ -1,0 +1,28 @@
+#loginPage .btnForgotPassword,
+#loginPage h1 {
+    display: none;
+}
+.manualLoginForm {
+    margin-top: 20vh;
+    margin-bottom: 0;
+}
+#loginPage button:hover {
+    box-shadow: inset 1000px 1000px 1000px 0 rgba(0, 0, 0, 0.1);
+}
+.emby-tab-button {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+@media only screen and (max-width: 1600px) {
+       .pageTabContent {
+       padding-top: 1.5em
+       }
+}
+.cardText-first{padding-top: 0.25em; padding-bottom: 0.5em; border: none;}
+.cardText-secondary{padding-bottom: 0.75em; margin-top: -1em}
+.cardText-first, .cardText-secondary{line-height: 2em; padding-left: 1.25em; padding-right: 1.25em;}
+.skinHeader, .emby-tabs-slider {box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); border: none;}
+.skinHeader.semiTransparent{backdrop-filter: blur(10px)!important;} background-color: rgba(0, 0, 0, 0.2)!important; }
+.cardBox{border: none; box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.3); background: transparent;}
+.cardBox:hover{box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.6); }
+.btnPlay {color: white!important}
