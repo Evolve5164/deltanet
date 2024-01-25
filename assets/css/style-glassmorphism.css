@@ -22,7 +22,7 @@
 .cardText-secondary{padding-bottom: 0.75em; margin-top: -1em}
 .cardText-first, .cardText-secondary{line-height: 2em; padding-left: 1.25em; padding-right: 1.25em;}
 .skinHeader, .emby-tabs-slider {box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); border: none;}
-.skinHeader.semiTransparent{backdrop-filter: blur(10px)!important;} background-color: rgba(0, 0, 0, 0.2)!important; }
+.skinHeader.semiTransparent{backdrop-filter: blur(10px)!important; background-color: rgba(0, 0, 0, 0.2)!important;}
 .cardBox{border: none; box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.3); background: transparent;}
 .cardBox:hover{box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.6); }
 .btnPlay {color: white!important}
