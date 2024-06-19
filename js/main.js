@@ -1,24 +1,20 @@
 // Set Urls
 const stream = "stream.deltanet.tk:55826"
-const request = "request.deltanet.tk:55826"
 const downloads = "jellyfin.org/downloads"
 
 // Set Urls to ping
 const streamPing = "https://" + stream + "/system/info/public";
-const requestPing = "https://" + request + "/api/v1/status";
 const downloadsPing = "https://" + downloads;
 
 // Set <a> href to given urls
 function setLinks() {
     document.getElementById("stream").textContent = stream
-    document.getElementById("request").textContent = request
     document.getElementById("downloads").textContent = downloads
 }
 
 // Set <a> href to given urls
 function setButtonLinks() {
     document.getElementById("streamButton").href = "https://" + stream
-    document.getElementById("requestButton").href = "https://" + request
     document.getElementById("downloads").href = "https://" + downloads
 }
 
@@ -74,5 +70,4 @@ function copyToClipboard(element) {
 setLinks()
 setButtonLinks()
 pingUrl(streamPing, "streamStatus");
-pingUrl(requestPing, "requestStatus");
 pingUrl(downloadsPing, "downloadsStatus");
