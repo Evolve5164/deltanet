@@ -1,5 +1,5 @@
 // Set Urls
-const stream = "stream.deltanet.tk:59139"
+const stream = "stream.deltanet.tk:55951"
 const downloads = "jellyfin.org/downloads"
 
 // Set Urls to ping
