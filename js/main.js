@@ -4,14 +4,14 @@ const items = [
         title: "Jellyfin",
         subtitle: "jellyfin.121.st:55951", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "jellyfin.121.st:55951",
+        link: "https://jellyfin.121.st:55951",
         pingUrl: "https://jellyfin.121.st:55951/system/info/public"
     },
     {
         title: "Jellyfin",
         subtitle: "jf.121.st:55951", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "jf.121.st:55951",
+        link: "https://jf.121.st:55951",
         pingUrl: "https://jf.121.st:55951/system/info/public"
     },
     {
