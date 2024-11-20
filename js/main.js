@@ -1,42 +1,101 @@
 // Set Urls
-const stream = "stream.deltanet.tk:55951"
-const downloads = "jellyfin.org/downloads"
+const items = [
+    {
+        title: "Jellyfin",
+        subtitle: "jellyfin.121.st:55951", // Add subtitle text here
+        image: "img/jellyfin_icon.png",
+        link: "jellyfin.121.st:55951",
+        pingUrl: "https://jellyfin.121.st:55951/system/info/public"
+    },
+    {
+        title: "Jellyfin",
+        subtitle: "jf.121.st:55951", // Add subtitle text here
+        image: "img/jellyfin_icon.png",
+        link: "jf.121.st:55951",
+        pingUrl: "https://jf.121.st:55951/system/info/public"
+    },
+    {
+        title: "Jellyfin",
+        subtitle: "jellyfin.deltanet.tk:55951", // Add subtitle text here
+        image: "img/jellyfin_icon.png",
+        link: "https://jellyfin.deltanet.tk:55951",
+        pingUrl: "https://jellyfin.deltanet.tk:55951/system/info/public"
+    },
+    {
+        title: "Jellyfin",
+        subtitle: "jf.deltanet.tk:55951", // Add subtitle text here
+        image: "img/jellyfin_icon.png",
+        link: "https://jf.deltanet.tk:55951",
+        pingUrl: "https://jf.deltanet.tk:55951/system/info/public"
+    }
+    /*
+    {
+        title: "Downloads",
+        subtitle: "jellyfin.org/downloads", // Add subtitle text here
+        image: "img/jellyfin_icon.png",
+        link: "https://jellyfin.org/downloads",
+        pingUrl: "https://jellyfin.org/downloads"
+    }
+    */
+];
 
-// Set Urls to ping
-const streamPing = "https://" + stream + "/system/info/public";
-const downloadsPing = "https://" + downloads;
-
-// Set <a> href to given urls
-function setLinks() {
-    document.getElementById("stream").textContent = stream
-    document.getElementById("downloads").textContent = downloads
+// Function to generate HTML for items
+function generateItems() {
+    const container = document.getElementById("itemsContainer");
+    items.forEach((item, index) => { // Use index to create unique IDs
+        const itemDiv = document.createElement("div");
+        itemDiv.className = "item";
+        itemDiv.innerHTML = `
+            <div class="item-inner">
+                <div class="row1">
+                    <img src="${item.image}" alt="${item.title} logo" class="img">
+                </div>
+                <div class="row2">
+                    <p class="title">${item.title}</p>
+                    <p class="subtitle" id="subtitle-${index}">${item.subtitle}</p> <!-- Unique subtitle ID -->
+                </div>
+                <div class="row3">
+                    <div class="buttons">
+                        <a href="${item.link}" class="button"><img src="img/material-open.svg"></a>
+                        <div class="status">
+                            <span class="dot" id="status-${index}"></span> <!-- Unique status ID for the dot -->
+                        </div>
+                        <a onclick="copyToClipboard('${item.subtitle}')" class="button"><img src="img/material-copy.svg"></a> <!-- Pass subtitle text directly -->
+                    </div>
+                </div>
+            </div>
+        `;
+        container.appendChild(itemDiv);
+    });
 }
 
-// Set <a> href to given urls
-function setButtonLinks() {
-    document.getElementById("streamButton").href = "https://" + stream
-    document.getElementById("downloads").href = "https://" + downloads
+
+// Function to ping URLs and update status
+function pingUrls() {
+    items.forEach((item, index) => {
+        const statusElementId = `status-${index}`; // Create the correct status ID for the dot
+        pingUrl(item.pingUrl, statusElementId);
+    });
 }
 
-function pingUrl(Url, statusElementId) {
-    document.getElementById(statusElementId).classList.add("fade-in-out");
-    fetch(Url)
-        .then(response => {
-            if (response.ok) {
-                document.getElementById(statusElementId).classList.remove("fade-in-out");
-                document.getElementById(statusElementId).classList.remove("down");
-                document.getElementById(statusElementId).classList.add("up");
-            }
-        })
-        .catch(error => {
-            document.getElementById(statusElementId).classList.remove("fade-in-out");
-            document.getElementById(statusElementId).classList.remove("up");
-            document.getElementById(statusElementId).classList.add("down");
-            console.error(error);
-        });
+// Call functions to generate items and ping URLs
+generateItems();
+pingUrls();
+
+// Copy to clipboard function
+function copyToClipboard(text) {
+    let $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(`https://${text}`).select(); // Add https:// to the text
+    document.execCommand("copy");
+    $temp.remove();
+    $("#notification").css("height", "50px");
+    setTimeout(function () {
+        $("#notification").css("height", "0");
+    }, 3000);
 }
 
-/* Get user IP and location */
+// Fetch user IP and location remains the same
 fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
@@ -45,8 +104,6 @@ fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
                 const city = data.city;
-                const region = data.region;
-                const country = data.country_name;
                 document.getElementById("ipAddress").textContent = ip;
                 document.getElementById("location").textContent = `${city}`;
                 document.getElementById("divider").textContent = "|";
@@ -54,20 +111,27 @@ fetch('https://api.ipify.org?format=json')
             });
     });
 
-function copyToClipboard(element) {
-    let $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val("https://" + $(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-    // Display a sliding notification that the text has been copied
-    $("#notification").css("height", "50px");
-    setTimeout(function () {
-        $("#notification").css("height", "0");
-    }, 3000);
+// Function to ping a URL and update the status
+function pingUrl(Url, statusElementId) {
+    document.getElementById(statusElementId).classList.add("fade-in-out");
+    fetch(Url)
+        .then(response => {
+            console.log(`Pinging ${Url}: ${response.status}`); // Log the response status
+            if (response.ok) {
+                document.getElementById(statusElementId).classList.remove("fade-in-out");
+                document.getElementById(statusElementId).classList.remove("down");
+                document.getElementById(statusElementId).classList.add("up");
+            } else {
+                console.error(`Error: ${response.statusText}`);
+                document.getElementById(statusElementId).classList.remove("fade-in-out");
+                document.getElementById(statusElementId).classList.remove("up");
+                document.getElementById(statusElementId).classList.add("down");
+            }
+        })
+        .catch(error => {
+            console.error(`Fetch error: ${error}`);
+            document.getElementById(statusElementId).classList.remove("fade-in-out");
+            document.getElementById(statusElementId).classList.remove("up");
+            document.getElementById(statusElementId).classList.add("down");
+        });
 }
-
-setLinks()
-setButtonLinks()
-pingUrl(streamPing, "streamStatus");
-pingUrl(downloadsPing, "downloadsStatus");

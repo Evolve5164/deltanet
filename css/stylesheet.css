@@ -193,7 +193,7 @@ p {
 .subtitle {
 	color: #d5d5d5;
 	font-size: 15px;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 .button, .status {
@@ -242,11 +242,6 @@ p {
 @media only screen and (min-width: 380px) and (max-width: 675px) {
 	.item {
 		min-width: 65%;
-	}
-}
-@media only screen and (min-width: 1200px) {
-	.items {
-		gap: 8vw;
 	}
 }
 
