@@ -1,28 +1,28 @@
 // Set Urls
 const items = [
     {
-        title: "Jellyfin",
+        title: "121.st",
         subtitle: "jellyfin.121.st:55951", // Add subtitle text here
         image: "img/jellyfin_icon.png",
         link: "https://jellyfin.121.st:55951",
         pingUrl: "https://jellyfin.121.st:55951/system/info/public"
     },
     {
-        title: "Jellyfin",
+        title: "121.st",
         subtitle: "jf.121.st:55951", // Add subtitle text here
         image: "img/jellyfin_icon.png",
         link: "https://jf.121.st:55951",
         pingUrl: "https://jf.121.st:55951/system/info/public"
     },
     {
-        title: "Jellyfin",
+        title: "deltanet.tk",
         subtitle: "jellyfin.deltanet.tk:55951", // Add subtitle text here
         image: "img/jellyfin_icon.png",
         link: "https://jellyfin.deltanet.tk:55951",
         pingUrl: "https://jellyfin.deltanet.tk:55951/system/info/public"
     },
     {
-        title: "Jellyfin",
+        title: "deltanet.tk",
         subtitle: "jf.deltanet.tk:55951", // Add subtitle text here
         image: "img/jellyfin_icon.png",
         link: "https://jf.deltanet.tk:55951",
