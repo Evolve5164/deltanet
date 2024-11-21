@@ -1,34 +1,28 @@
 // Set Urls
 const items = [
     {
-        title: "121.st",
-        subtitle: "jellyfin.121.st:55951", // Add subtitle text here
+        title: "Jellyfin",
+        subtitle: "stream.deltanet.tk:55951", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "https://jellyfin.121.st:55951",
-        pingUrl: "https://jellyfin.121.st:55951/system/info/public"
+        link: "https://stream.deltanet.tk:55951",
+        pingUrl: "https://stream.deltanet.tk:55951/system/info/public"
     },
-    {
-        title: "121.st",
-        subtitle: "jf.121.st:55951", // Add subtitle text here
-        image: "img/jellyfin_icon.png",
-        link: "https://jf.121.st:55951",
-        pingUrl: "https://jf.121.st:55951/system/info/public"
-    },
-    {
-        title: "deltanet.tk",
-        subtitle: "jellyfin.deltanet.tk:55951", // Add subtitle text here
-        image: "img/jellyfin_icon.png",
-        link: "https://jellyfin.deltanet.tk:55951",
-        pingUrl: "https://jellyfin.deltanet.tk:55951/system/info/public"
-    },
-    {
-        title: "deltanet.tk",
-        subtitle: "jf.deltanet.tk:55951", // Add subtitle text here
-        image: "img/jellyfin_icon.png",
-        link: "https://jf.deltanet.tk:55951",
-        pingUrl: "https://jf.deltanet.tk:55951/system/info/public"
-    }
     /*
+    {
+        title: "121.st",
+        subtitle: "stream.121.st:55951", // Add subtitle text here
+        image: "img/jellyfin_icon.png",
+        link: "https://stream.121.st:55951",
+        pingUrl: "https://stream.121.st:55951/system/info/public"
+    },
+    */
+    {
+        title: "Jellyfin",
+        subtitle: "1.121.st:55951", // Add subtitle text here
+        image: "img/jellyfin_icon.png",
+        link: "https://1.121.st:55951",
+        pingUrl: "https://1.121.st:55951/system/info/public"
+    },
     {
         title: "Downloads",
         subtitle: "jellyfin.org/downloads", // Add subtitle text here
@@ -36,7 +30,6 @@ const items = [
         link: "https://jellyfin.org/downloads",
         pingUrl: "https://jellyfin.org/downloads"
     }
-    */
 ];
 
 // Function to generate HTML for items
