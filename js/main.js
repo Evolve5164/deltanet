@@ -2,26 +2,26 @@
 const items = [
     {
         title: "Jellyfin",
-        subtitle: "stream.deltanet.tk:54101", // Add subtitle text here
+        subtitle: "stream.deltanet.tk:59397", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "https://stream.deltanet.tk:54101",
-        pingUrl: "https://stream.deltanet.tk:54101/system/info/public"
+        link: "https://stream.deltanet.tk:59397",
+        pingUrl: "https://stream.deltanet.tk:59397/system/info/public"
     },
     /*
     {
         title: "121.st",
-        subtitle: "stream.121.st:54101", // Add subtitle text here
+        subtitle: "stream.121.st:59397", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "https://stream.121.st:54101",
-        pingUrl: "https://stream.121.st:54101/system/info/public"
+        link: "https://stream.121.st:59397",
+        pingUrl: "https://stream.121.st:59397/system/info/public"
     },
     */
     {
         title: "Jellyfin",
-        subtitle: "1.121.st:54101", // Add subtitle text here
+        subtitle: "1.121.st:59397", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "https://1.121.st:54101",
-        pingUrl: "https://1.121.st:54101/system/info/public"
+        link: "https://1.121.st:59397",
+        pingUrl: "https://1.121.st:59397/system/info/public"
     },
     {
         title: "Downloads",
