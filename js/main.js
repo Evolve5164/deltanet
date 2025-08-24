@@ -2,10 +2,10 @@
 const items = [
     {
         title: "Jellyfin",
-        subtitle: "stream.deltanet.tk:59397", // Add subtitle text here
+        subtitle: "stream.deltanet.tk:57207", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "https://stream.deltanet.tk:59397",
-        pingUrl: "https://stream.deltanet.tk:59397/system/info/public"
+        link: "https://stream.deltanet.tk:57207",
+        pingUrl: "https://stream.deltanet.tk:57207/system/info/public"
     },
     /*
     {
@@ -128,3 +128,4 @@ function pingUrl(Url, statusElementId) {
             document.getElementById(statusElementId).classList.add("down");
         });
 }
+
