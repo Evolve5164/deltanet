@@ -10,18 +10,18 @@ const items = [
     /*
     {
         title: "121.st",
-        subtitle: "stream.121.st:59397", // Add subtitle text here
+        subtitle: "stream.121.st:57207", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "https://stream.121.st:59397",
-        pingUrl: "https://stream.121.st:59397/system/info/public"
+        link: "https://stream.121.st:57207",
+        pingUrl: "https://stream.121.st:57207/system/info/public"
     },
     */
     {
         title: "Jellyfin",
-        subtitle: "1.121.st:59397", // Add subtitle text here
+        subtitle: "1.121.st:57207", // Add subtitle text here
         image: "img/jellyfin_icon.png",
-        link: "https://1.121.st:59397",
-        pingUrl: "https://1.121.st:59397/system/info/public"
+        link: "https://1.121.st:57207",
+        pingUrl: "https://1.121.st:57207/system/info/public"
     },
     {
         title: "Downloads",
