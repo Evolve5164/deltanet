@@ -59,22 +59,28 @@ async function loadItemsFromYaml(url = 'items.yml') {
   async function pingUrl(url, statusId) {
     const el = document.getElementById(statusId);
     if (!el || !url) return;
-    el.classList.add('fade-in-out');
+  
+    el.classList.remove('up', 'down');
+    el.classList.add('pinging');
+  
     try {
-      // no-cors may return opaque; treat opaque as up
       const res = await fetch(url, { method: 'GET', mode: 'no-cors' });
       const ok = res && (res.ok || res.type === 'opaque');
+  
+      await new Promise(r => setTimeout(r, 600));
+  
+      el.classList.remove('pinging');
+      void el.offsetWidth;
       el.classList.toggle('up', ok);
       el.classList.toggle('down', !ok);
-      console.log(`Ping ${url}:`, (res && res.status) || res.type || 'no response');
     } catch (e) {
       console.error('Ping error', e);
-      el.classList.add('down');
-      el.classList.remove('up');
-    } finally {
-      el.classList.remove('fade-in-out');
+      el.classList.remove('pinging');
+      void el.offsetWidth;
+      el.classList.toggle('up', false);
+      el.classList.toggle('down', true);
     }
-  }
+  }  
   
   // --- Copy helper with fallback + notification ---
   function copyToClipboard(text = '') {

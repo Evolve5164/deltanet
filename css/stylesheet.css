@@ -245,34 +245,40 @@ p {
 	}
 }
 
-
 .dot {
 	height: 10px;
 	width: 10px;
 	border-radius: 50%;
-	/*background-color: rgba(255, 255, 255, 0.35);*/
-	background-color: #FFA500;
-	box-shadow: 0 0 35px 5px #FFA500;
+	background-color: #9aa0a6; /* grey */
+	box-shadow: 0 0 6px 2px rgba(154,160,166,0.28);
 	align-self: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	transition: background-color 500ms ease, box-shadow 500ms ease;
-}
+	margin: 20px 0;
+	transition: background-color 600ms ease, box-shadow 600ms ease;
+	will-change: background-color, box-shadow, transform;
+  }
+  
+  .pinging {
+	animation: ping-blink 1000ms ease-in-out infinite;
+  }
 
-.up {
+  @keyframes ping-blink {
+	0%   { background-color: #9aa0a6}
+	50%  { background-color: #FFA500; box-shadow: 0 0 35px 5px #FFA500}
+	100% { background-color: #9aa0a6}
+  }
+  
+  .up {
 	background-color: #00ff00;
 	box-shadow: 0 0 35px 5px #00ff00;
-}
-
-.down {
+	transition: background-color 600ms ease, box-shadow 600ms ease;
+  }
+  
+  .down {
 	background-color: #ff0000;
 	box-shadow: 0 0 35px 5px #ff0000;
-	/*
-	background-color: rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	*/
-}
+	transition: background-color 600ms ease, box-shadow 600ms ease;
+  }
+  
 
 .status {
 	cursor: default;
