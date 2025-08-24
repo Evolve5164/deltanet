@@ -1,9 +1,9 @@
 items:
   - title: "Jellyfin"
-    subtitle: "stream.deltanet.tk:59397"
+    subtitle: "stream.deltanet.tk:57207"
     image: "img/jellyfin_icon.png"
-    link: "https://stream.deltanet.tk:59397"
-    pingUrl: "https://stream.deltanet.tk:59397/system/info/public"
+    link: "https://stream.deltanet.tk:57207"
+    pingUrl: "https://stream.deltanet.tk:57207/system/info/public"
   - title: "Jellyfin"
     subtitle: "1.121.st:57207"
     image: "img/jellyfin_icon.png"
@@ -13,4 +13,5 @@ items:
     subtitle: "jellyfin.org/downloads"
     image: "img/jellyfin_icon.png"
     link: "https://jellyfin.org/downloads"
+
     pingUrl: "https://jellyfin.org/downloads"
