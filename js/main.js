@@ -80,7 +80,25 @@ async function loadItemsFromYaml(url = 'items.yml') {
       el.classList.toggle('up', false);
       el.classList.toggle('down', true);
     }
-  }  
+  }
+
+  // Refresh button that reruns pingUrls and shows a spinner (no visible text)
+  const btn = document.getElementById('refreshButton');
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      btn.classList.add('spinning');
+      btn.setAttribute('aria-busy', 'true');
+
+      const res = pingUrls();
+      if (res instanceof Promise) await res;
+      else await new Promise(r => setTimeout(r, 700));
+
+      btn.classList.remove('spinning');
+      btn.removeAttribute('aria-busy');
+      btn.disabled = false;
+    });
+  }
   
   // --- Copy helper with fallback + notification ---
   function copyToClipboard(text = '') {

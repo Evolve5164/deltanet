@@ -38,4 +38,7 @@
 	overflow-y: hidden;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
-  }
+ }
+.emby-tab-button {
+	font-weight: 500;
+}

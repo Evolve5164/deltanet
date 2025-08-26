@@ -14,5 +14,3 @@ items:
     image: "img/jellyfin_icon.png"
     link: "https://jellyfin.org/downloads"
     pingUrl: "https://jellyfin.org/downloads"
-
-

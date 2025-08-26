@@ -283,3 +283,60 @@ p {
 .status {
 	cursor: default;
 }
+
+/* refresh button: no text, just the svg icon */
+#refreshButton {
+	position: absolute;
+	top: 8px; left: 8px;
+	width: 50px; height: 50px;
+	padding: 6px;
+	border: 0;
+	border-radius: 8px;
+	background: transparent url('/img/material-refresh.svg') center / 30px 30px no-repeat;
+	background-color: rgba(255, 255, 255, 0.04);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	color: transparent;
+	cursor: pointer;
+	z-index: 9999;
+	transition: box-shadow 200ms, background-color 200ms, backdrop-filter 200ms, -webkit-backdrop-filter 200ms;
+  }
+  
+  
+  
+  /* subtle hover/focus */
+  #refreshButton:hover,
+  #refreshButton:focus {
+	background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* pressed state */
+  #refreshButton:active {
+	transform: translateY(0);
+	opacity: 0.9;
+  }
+  
+  /* disabled state while refreshing */
+  #refreshButton[disabled] {
+	cursor: default;
+	opacity: 0.6;
+	transform: none;
+  }
+  
+  /* optional "spinning" state while refreshing (add class .spinning for animation) */
+  @keyframes spin {
+	from { transform: rotate(0deg); }
+	to   { transform: rotate(360deg); }
+  }
+  #refreshButton.spinning {
+	animation: spin 1s linear infinite;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
+  }
+  
